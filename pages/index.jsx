@@ -16,21 +16,21 @@ function Index({ products }) {
 
 
       <h1>Home Page</h1>
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='grid grid-col md:grid-cols-3 gap-4'>
         {
           products.map((product) => {
             return (
               <div key={product.uuid}>
 
                 <Link href={`/product/${product.uuid}`}>
-                  <div className='bg-gray-50 p-4' >
+                  <div className='bg-white p-4' >
                     <Image
                       src={`https://api.h2o.ng${product.images['500']}`}
                       alt="Picture of the author"
                       width={500}
                       height={500}
                     />
-                    <div className='text-center p-4'>
+                    <div className='text-center font-semibold p-4'>
                       <h1> {product.title}</h1>
                       <h1> {product.price} </h1>
                     </div>
